@@ -1,9 +1,58 @@
-.container {
+.sinatra-container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
-th {
-  text-align: left;
+
+#container {
+  border: 1px dotted black;
+  width: 90%;
+  margin: 10px auto;
+  background-color: white;
+  color: black;
+  line-height: 120%;
+}
+
+
+.top_banner {
+  margin: 5px;
+  padding: 5px 15px;
+  color: black;
+  font: bold 1.5em Georgia;
+  border: 1px dotted gray;
+}
+
+.top_banner h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.about {
+  border: 1px dotted gray;
+
+  height: 100%;
+  padding: 0 1em;
+  margin: 0 5px;
+  width: 288px;
+  float: right;
+
+}
+
+.post {
+  border: 1px dotted gray;
+  margin: 0 330px 5px 5px;
+}
+
+.post p {
+  font: 16px Arial;
+  padding: 0 5px;
+}
+
+.footer {
+  float: left;
+  clear: both;
+  font: 12px Arial;
+  padding: .5em;
+
 }
