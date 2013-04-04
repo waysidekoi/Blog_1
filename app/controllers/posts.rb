@@ -5,10 +5,17 @@
 # Edit existing posts
 # Delete existing post
 
+get '/posts/:post_id' do
+  @post = Post.find(params[:post_id])
 
-# helpers do
+  show_one_post(@post)
+end
+
+helpers do
   
-#   def post_exist?
-#   end
+   def show_one_post(post)
+    @post = post
+    erb :index
+   end
   
-# end
+end
