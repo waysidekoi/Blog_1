@@ -28,16 +28,44 @@
   margin: 0;
 }
 
-.about {
+.sidebar {
   border: 1px dotted gray;
 
   height: 100%;
-  padding: 0 1em;
+  padding: 5px 1em;
   margin: 0 5px;
   width: 288px;
   float: right;
+}
+
+.about_me {
+  border: 1px dotted gray;
+
+  display: inline-block;
 
 }
+
+.about_me ul {
+  border: 1px dotted gray;
+  display: inline-block;
+  margin: 0;
+  padding: 0.3em;
+  float: left;
+  clear: left;
+}
+
+.submit_post {
+  border: 1px dotted gray;
+  display: inline-block;
+
+
+}
+
+.submit_post h2 {
+  padding: 5px;
+  margin: 0;
+}
+
 
 .post {
   border: 1px dotted gray;
