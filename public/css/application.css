@@ -6,8 +6,11 @@
 }
 
 #container {
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
+
+  display: block;
   width: 90%;
+  height: auto;
   margin: 10px auto;
   background-color: white;
   color: black;
@@ -19,7 +22,7 @@
   margin: 5px;
   padding: 5px 15px;
   color: black;
-  font: bold 1.5em Georgia;
+  font: bold 1.5em 'Ubuntu', Georgia;
   border: 1px dotted gray;
 }
 
@@ -40,7 +43,6 @@
 
 .about_me {
   border: 1px dotted gray;
-
   display: inline-block;
 
 }
@@ -57,15 +59,62 @@
 .submit_post {
   border: 1px dotted gray;
   display: inline-block;
-
+  padding-left: 5px;
 
 }
 
 .submit_post h2 {
-  padding: 5px;
   margin: 0;
+  padding-top: 5px;
+  margin-bottom: 5px;
 }
 
+.input_field .title {
+  padding-left: 5px;
+
+
+  border-bottom-color: #b3b3b3;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #b3b3b3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #b3b3b3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #b3b3b3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-style: solid;
+  border-top-width: 1px
+}
+
+.input_field .body {
+  padding-left: 5px;
+  width: 250px;
+  height: 250px;
+  border: none;
+
+  border-bottom-color: #b3b3b3;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #b3b3b3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #b3b3b3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #b3b3b3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-style: solid;
+  border-top-width: 1px
+
+}
 
 .post {
   border: 1px dotted gray;
@@ -79,11 +128,11 @@
   top: 7px;
   left: 5px;
   border-bottom: 1px solid;
-  font: 20px Garamond;
+  font: 20px Georgia;
 }
 
 .post p {
-  font: 16px Times;
+  font: 16px 'Ubuntu',Times;
   padding: 0 5px;
 }
 
