@@ -1,6 +1,7 @@
 # just have the index route, which will display homepage
 
 get '/' do
-  # Look in app/views/index.erb
+  @all_posts = Post.all
+  
   erb :index
 end

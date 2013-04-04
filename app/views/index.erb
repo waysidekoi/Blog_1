@@ -16,13 +16,13 @@
     <ul>more stuff about me</ul>
     <ul>it's all about me</ul>
   </div>
+
   <div class="submit_post">
-    <h2> SUBMIT TITLE GOES HERE </h2>
+    <h2> What's on your mind? </h2>
     <form action="" method="">
       <div class="input_field"> 
         <input class="title" type="text" name="title" placeholder="title">
         <textarea class="body" name="title" placeholder="body" row="30" cols="20"></textarea>
-
         <input type="submit" value="Post">
       </div>
     </form>
@@ -30,13 +30,10 @@
 </div>
 
 <div class="post">
-  <span class="post_title"> TITLE </span>
-<p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-</p>
-<p>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-</p>
+  <% @all_posts.each do |post| %>
+  <span class="post_title"><%= post.title %></span>
+  <p><%= post.body %></p>
+  <% end %>
 </div>
 
 <div class="footer"> Wayne Wayne BloGgin 2013 </div>
