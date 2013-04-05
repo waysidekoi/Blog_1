@@ -17,6 +17,12 @@
   line-height: 120%;
 }
 
+.message p {
+  display: inline;
+  font: italic 14px 'Ubuntu';
+  color: red;
+  padding: 3px, 3px;
+}
 
 .top_banner {
   margin: 5px;

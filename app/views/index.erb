@@ -9,20 +9,27 @@
   <h1 class="header">Master of Disaster</h1>
 </div>
 
+<div class="message">
+  <% if @message %>
+    <p><%= "Error: #{@message}" %></p>
+  <% end %>
+</div>
+
 <div class="sidebar">
-  <div class="about_me">
+<!--   <div class="about_me">
     <ul>About me stuff</ul>
     <ul>data stuff</ul>
     <ul>more stuff about me</ul>
     <ul>it's all about me</ul>
-  </div>
+  </div> -->
 
   <div class="submit_post">
     <h2> What's on your mind? </h2>
-    <form action="" method="">
+    <form action="/posts/new" method="POST">
       <div class="input_field"> 
         <input class="title" type="text" name="title" placeholder="title">
-        <textarea class="body" name="title" placeholder="body" row="30" cols="20"></textarea>
+        <input class="title" type="text" name="tags" placeholder="tag1, tag2, tag3">
+        <textarea class="body" name="body" placeholder="body" row="30" cols="20"></textarea>
         <input type="submit" value="Post">
       </div>
     </form>
@@ -31,14 +38,21 @@
 
 
 <div class="post">
-  <% if @all_posts %>
-    <% @all_posts.each do |post| %>
-    <span class="post_title"><%= post.title %></span>
-    <p><%= post.body %></p>
-    <% end %>
+  <% if @single_post %>
+    <span class="post_title">
+      <%= "#{@single_post.created_at.strftime('%Y/%m/%d')} #{@single_post.title}" %></span>
+    <p><%= @single_post.body %></p>
+    <p><%= "tags: @tags" %></p>
+    <p><a href=<%= "/posts/edit/#{@single_post.id}" %>>edit</a></p>
   <% else %>
-    <span class="post_title"><%= @post.title %></span>
-    <p><%= @post.body %></p>
+    <% @all_posts.each do |post| %>
+    <span class="post_title">
+      <%= "#{post.created_at.strftime('%Y/%m/%d')} #{post.title}" %></span>
+    <p><%= post.body %></p>
+    <br>
+    <p><%= "tags: #{post.tags.map { |tag| tag.name }.join(", ") }" %></p>
+    <p><a href=<%= "/posts/edit/#{post.id}" %>>edit</a></p>
+    <% end %>
   <% end %>
 
 </div>

@@ -1,0 +1,11 @@
+<div class="sinatra-container">
+  Edit Post:
+  <form action="/posts/new" method="POST">
+    <div class="input_field"> 
+      <input class="title" type="text" name="title" placeholder=<%= "#{@title}" %> >
+      <textarea class="body" name="body" placeholder=<%= "#{@body}" %> row="30" cols="20"></textarea>
+      <input type="submit" value="Post">
+    </div>
+  </form>
+  <p><a href=<%= "/posts/delete/#{@id}" %> >delete</a></p>
+</div>
